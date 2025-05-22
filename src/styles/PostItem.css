@@ -1,0 +1,21 @@
+.post-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.post-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: gray;
+  margin-top: 4px;
+}

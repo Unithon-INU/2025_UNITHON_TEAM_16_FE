@@ -1,9 +1,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import CommentBox from '../components/CommentBox';
+import CommentForm from '../components/CommentForm';
+
+const currentUser = '유학생123'; // 로그인된 사용자 이름이라고 가정
 
 function PostDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const currentUser = '유학생123'; // 로그인된 사용자 이름 (예시)
 
   // 샘플 게시글 데이터
   const samplePosts = [
@@ -12,13 +18,32 @@ function PostDetail() {
   ];
 
   const post = samplePosts.find((p) => p.id === parseInt(id));
-  const [comments, setComments] = useState([]); // 댓글 목록
-  const [newComment, setNewComment] = useState(''); // 입력값
+  const [comments, setComments] = useState([
+    {
+      id: 1,
+      author: '유학생A',
+      content: '첫 댓글입니다!',
+      date: '2025-05-15',
+    },
+  ]);
 
-  const handleAddComment = () => {
-    if (newComment.trim() === '') return;
-    setComments([...comments, newComment]);
-    setNewComment('');
+  // 댓글 추가
+  const handleAddComment = (newCommentContent) => {
+    const newComment = {
+      id: Date.now(),
+      author: currentUser,
+      content: newCommentContent,
+      date: new Date().toISOString().split('T')[0],
+    };
+    setComments([newComment, ...comments]);
+  };
+
+  // 댓글 삭제
+  const handleDeleteComment = (commentId) => {
+    const confirm = window.confirm('댓글을 삭제하시겠습니까?');
+    if (confirm) {
+      setComments(comments.filter((c) => c.id !== commentId));
+    }
   };
 
   const handleDelete = () => {
@@ -47,25 +72,19 @@ function PostDetail() {
       <hr style={{ margin: '30px 0' }} />
 
       <h3>💬 댓글</h3>
-      <div style={{ marginBottom: 10 }}>
-        <input
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
-          placeholder="댓글을 입력하세요"
-          style={{ width: '80%', padding: 8 }}
-        />
-        <button onClick={handleAddComment} style={{ marginLeft: 10 }}>
-          등록
-        </button>
-      </div>
 
-      <ul>
-        {comments.map((comment, index) => (
-          <li key={index} style={{ marginBottom: 8 }}>
-            {comment}
-          </li>
-        ))}
-      </ul>
+      {/* 댓글 작성 폼은 한 번만 넣고, onAddComment를 정확히 넘겨줌 */}
+      <CommentForm onAddComment={handleAddComment} />
+
+      {comments.length === 0 && <p>아직 댓글이 없습니다.</p>}
+      {comments.map((comment) => (
+        <CommentBox
+          key={comment.id}
+          comment={comment}
+          onDelete={() => handleDeleteComment(comment.id)}
+          canDelete={comment.author === currentUser}
+        />
+      ))}
     </div>
   );
 }
