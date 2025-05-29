@@ -12,6 +12,11 @@ function Home() {
     navigate('/login');
   };
 
+  const goToChat = () => {
+    navigate('/chat-list'); // 기존 /chat → /chat-list
+  };
+
+
   return (
     <div style={styles.container}>
       <h1>홈 화면</h1>
@@ -24,6 +29,11 @@ function Home() {
       <button onClick={goToSignup} style={styles.linkButton}>
         회원가입
       </button>
+
+      <button onClick={goToChat} style={styles.linkButton}>
+        채팅목록 이동
+      </button>
+  
     </div>
   );
 }
