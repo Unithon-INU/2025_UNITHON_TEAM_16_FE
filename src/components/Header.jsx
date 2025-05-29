@@ -1,19 +1,9 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/Header.css';
+import SearchBar from './SearchBar'; // 추가
 
 function Header() {
-  const navigate = useNavigate();
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const keyword = e.target.elements.search.value.trim();
-    if (keyword) {
-      alert(`'${keyword}' 검색은 아직 미구현이에요 😅`);
-      // 예: 나중에 navigate(`/search?keyword=${keyword}`);
-    }
-  };
-
   return (
     <header className="header">
       <div className="header__left">
@@ -27,10 +17,7 @@ function Header() {
         <Link to="/login">로그인</Link>
         <Link to="/signup">회원가입</Link>
       </nav>
-      <form onSubmit={handleSearch} className="header__search">
-        <input type="text" name="search" placeholder="검색어 입력" />
-        <button type="submit">검색</button>
-      </form>
+      <SearchBar /> {/* 여기에 컴포넌트 삽입 */}
     </header>
   );
 }
