@@ -1,0 +1,210 @@
+/* Footer */
+.footer {
+  position: relative;
+  width: 1440px;
+  height: 480px;
+  margin: 0 auto;
+  background: #fafafb;
+}
+
+/* Site Map */
+.site-map {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1290px;
+  height: 400px;
+  left: 72px;
+  top: 0px;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+/* About & Socials */
+.about-socials {
+  position: absolute;
+  width: 250px;
+  height: 209px;
+  left: 100px;
+  top: 72px;
+}
+
+/* HIRE U Logo */
+.logo {
+  position: absolute;
+  width: 96px;
+  height: 48px;
+  left: 0px;
+  top: 6px;
+  font-family: 'Marvel', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #214bbe;
+  margin: 0;
+}
+
+/* Description */
+.description {
+  position: absolute;
+  width: 250px;
+  height: 42px;
+  left: 0px;
+  top: 78px;
+  font-family: 'Marvel', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 0;
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 94.375px 5px 0px;
+  gap: 17.91px;
+  position: absolute;
+  width: 256px;
+  height: 31px;
+  left: 0px;
+  top: 152px;
+}
+
+/* Social Icons */
+.social-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  position: absolute;
+  width: 511px;
+  height: 44px;
+  left: 684px;
+  top: 72px;
+}
+
+.link {
+  font-family: 'Marvel', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+  flex: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #214bbe;
+}
+
+/* HIRE ME Info */
+.hire-me-info {
+  position: absolute;
+  width: 359px;
+  height: 83px;
+  left: 831px;
+  top: 248px;
+}
+
+.hire-me-info p {
+  font-family: 'Marvel', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #000000;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Copyright */
+.copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 44px 0px;
+  gap: 857.02px;
+  position: absolute;
+  width: 228px;
+  height: 80px;
+  left: 72px;
+  top: 400px;
+}
+
+/* Shots Copyright */
+.shots-copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 15.66px;
+  width: 223.66px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Shots Icon */
+.shots-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.shots-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Copyright Text */
+.shots-copyright span {
+  width: 188px;
+  height: 20px;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
