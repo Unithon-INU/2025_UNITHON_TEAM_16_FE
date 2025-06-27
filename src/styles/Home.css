@@ -1,0 +1,153 @@
+/* Hero */
+.hero {
+  position: relative;
+  width: 1440px;
+  height: 560px;
+  margin: 0 auto;
+  background: #000000;
+  overflow: hidden;
+}
+
+/* Video Still */
+.video-still {
+  position: absolute;
+  width: 1600px; /* 기존 1440px보다 키움 */
+  height: 830px; /* 기존 748px보다 키움 */
+  left: 50%;
+  top: -120px;
+  transform: translateX(-50%); /* 가운데 정렬 유지 */
+
+  background: url('../assets/1.jpg'), rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover; /* 이미지가 꽉 차게 */
+  background-position: center;
+  z-index: 0;
+}
+
+/* Search Input Container */
+.search-input {
+  position: absolute;
+  width: 600px;
+  height: 58px;
+  left: 50%;
+  top: 323.31px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  isolation: isolate;
+  z-index: 10;
+}
+
+/* Search Input Field */
+.search-input input {
+  width: 600px;
+  height: 58px;
+  padding: 20px 56px 21px 56px;
+  background: #f3f3f4;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9e9ea7;
+  outline: none;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+}
+
+/* Search Icon SVG */
+.search-input svg {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 25px;
+  top: 20px;
+  z-index: 1;
+  pointer-events: none;
+  fill: #9e9ea7;
+}
+
+/* Headline Text */
+.headline {
+  position: absolute;
+  width: 814px;
+  height: 131px;
+  left: 313px;
+  top: 147px;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 43px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 5;
+}
+
+/* Shot */
+.shots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 40px auto;
+  justify-content: center;
+}
+
+.shot {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 297px;
+}
+
+.thumbnail {
+  position: relative;
+  width: 297px;
+  height: 222.75px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(160, 160, 160, 0.2),
+      rgba(160, 160, 160, 0.2)
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.03) 100%);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0d0c22;
+}

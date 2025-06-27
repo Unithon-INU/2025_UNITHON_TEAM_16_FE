@@ -1,0 +1,281 @@
+/* HIRE U Sign In Page CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Marvel:wght@400;700&family=Archivo+Narrow:wght@400;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 80px;
+  min-height: calc(100vh - 560px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-form {
+  width: 800px; /* 고정 너비 */
+  height: 350px; /* 고정 높이 */
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #1e1e1e;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  min-height: 40px;
+  transition: border-color 0.3s ease;
+}
+
+.input-box:focus-within {
+  border-color: #214bbe;
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1e1e1e;
+}
+
+.input-box input::placeholder {
+  color: #b3b3b3;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+}
+
+.login-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: rgba(33, 75, 190, 0.8);
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: rgba(33, 75, 190, 1);
+  transform: translateY(-1px);
+}
+
+.forgot-password {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #1e1e1e;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  color: #214bbe;
+}
+
+/* Footer */
+.footer {
+  background: #fafafb;
+  padding: 72px 0 44px;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.site-map {
+  border-bottom: 1px solid #e7e7e9;
+  padding-bottom: 72px;
+  margin-bottom: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-section {
+  max-width: 250px;
+}
+
+.footer-logo {
+  font-family: 'Marvel', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #214bbe;
+  margin-bottom: 6px;
+}
+
+.about-text {
+  font-family: 'Marvel', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  margin: 32px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 74px;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  background: #3d3d4e;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #214bbe;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-links a {
+  font-family: 'Marvel', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #214bbe;
+}
+
+.contact-info {
+  font-family: 'Marvel', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  color: #000000;
+  text-align: right;
+  max-width: 359px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shots-icon {
+  width: 20px;
+  height: 20px;
+  background: #757575;
+  border-radius: 2px;
+}
+
+.copyright-text {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #757575;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .footer-container {
+    padding: 0 20px;
+  }
+
+  .site-map {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .login-form {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
