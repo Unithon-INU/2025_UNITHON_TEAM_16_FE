@@ -1,0 +1,270 @@
+.chat-list-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 390px;
+  height: 100vh;
+  background: #FFFFFF;
+  border-right: 1px solid rgba(94, 94, 94, 0.2);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.chat-list-header {
+  position: relative;
+  width: 100%;
+  height: 132px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+.chat-title {
+  position: absolute;
+  width: 131px;
+  height: 27px;
+  left: 78px;
+  top: 26px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: rgba(33, 75, 190, 0.8);
+}
+
+.chat-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 24px;
+  top: 20px;
+  background: rgba(33, 75, 190, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.search-container {
+  position: absolute;
+  width: 284px;
+  height: 46px;
+  left: 24px;
+  top: 86px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #CCCFD0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  background: rgba(171, 175, 177, 0.6);
+  margin-right: 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: rgba(171, 175, 177, 0.6);
+  background: transparent;
+}
+
+.new-chat-btn {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  left: 320px;
+  top: 86px;
+  background: rgba(33, 75, 190, 0.8);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.pinned-section {
+  position: absolute;
+  width: 115px;
+  height: 20px;
+  left: 24px;
+  top: 156px;
+  display: flex;
+  align-items: center;
+}
+
+.pin-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #818181;
+}
+
+.section-label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #818181;
+}
+
+.pinned-chats {
+  position: absolute;
+  top: 184px;
+  left: 0;
+  width: 100%;
+}
+
+.all-messages-section {
+  position: absolute;
+  width: 117px;
+  height: 18px;
+  left: 24px;
+  top: 454px;
+  display: flex;
+  align-items: center;
+}
+
+.message-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #818181;
+}
+
+.all-messages {
+  position: absolute;
+  top: 481px;
+  left: 0;
+  width: 100%;
+}
+
+.room-item {
+  position: relative;
+  width: 390px;
+  height: 82px;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: background-color 0.2s;
+}
+
+.room-item-selected {
+  background: rgba(33, 75, 190, 0.15);
+  border-top: 1px solid rgba(33, 75, 190, 0.2);
+  border-bottom: 1px solid rgba(33, 75, 190, 0.2);
+}
+
+.room-avatar {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  left: 24px;
+  top: 12px;
+  background: #D9D9D9;
+  border-radius: 50%;
+}
+
+.room-info {
+  position: absolute;
+  left: 98px;
+  top: 18px;
+  right: 80px;
+}
+
+.room-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #717171;
+  margin-bottom: 4px;
+}
+
+.room-name-unread {
+  font-weight: 600;
+  color: #333333;
+}
+
+.last-message {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A0A0A0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.last-message-unread {
+  color: #5F5F5F;
+}
+
+.last-message-typing {
+  color: rgba(33, 75, 190, 0.8);
+}
+
+.room-meta {
+  position: absolute;
+  right: 24px;
+  top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.timestamp {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #A0A0A0;
+  margin-bottom: 8px;
+}
+
+.unread-badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 6px;
+  min-width: 18px;
+  height: 18px;
+  background: #214BBE;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 8px;
+  color: #FFFFFF;
+}
+
+.empty-state {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #A0A0A0;
+  font-size: 16px;
+}
