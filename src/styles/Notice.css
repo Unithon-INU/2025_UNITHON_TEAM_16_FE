@@ -1,0 +1,138 @@
+.notice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 40px;
+  width: 1440px;
+  height: 983px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.notice-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 64px;
+  gap: 48px;
+  width: 1200px;
+  height: 909px;
+  background: #ffffff;
+}
+
+.notice-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 8px;
+}
+
+.notice-heading-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #1e1e1e;
+}
+
+.notice-heading-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #757575;
+}
+
+.notice-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 1072px;
+}
+
+.notice-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+  width: 1072px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.notice-card-image {
+  width: 160px;
+  height: 160px;
+  background-color: #e3e3e3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.notice-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.notice-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.notice-card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #1e1e1e;
+}
+
+.notice-card-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #757575;
+}
+
+.notice-card-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.notice-card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 75px;
+  height: 40px;
+  background: #e3e3e3;
+  border: 1px solid #767676;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1e1e1e;
+  cursor: pointer;
+}

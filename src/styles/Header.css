@@ -36,9 +36,9 @@
 .logo-icon {
   width: 31px;
   height: 32px;
-  background: rgba(33, 75, 190, 0.8);
+  background: url('../assets/icon.jpg') no-repeat center center;
   border-radius: 4px;
-  margin-left: 8px; /* 글자와 아이콘 사이 간격 */
+  margin-left: 8px;
 }
 
 .nav-links {
@@ -65,10 +65,11 @@
 }
 
 .search-icon {
-  width: 18px;
-  height: 18px;
-  background: #9e9ea7;
-  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background: url('../assets/search_icon.jpg') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
 }
 
 .sign-in-link {
@@ -92,4 +93,36 @@
 
 .sign-up-btn:hover {
   background: rgba(33, 75, 190, 0.9);
+}
+
+/* 🔑 SearchBar 나타날 때 스타일 */
+.header__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header__search input {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.header__search button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  background: #214bbe;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header__search button:hover {
+  background: #193a8c;
 }

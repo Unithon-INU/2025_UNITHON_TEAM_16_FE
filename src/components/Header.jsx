@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar'; // SearchBar import 추가
 import '../styles/Header.css';
 
 function Header() {
+  const [showSearch, setShowSearch] = useState(false);
+
+  const toggleSearch = () => {
+    setShowSearch((prev) => !prev);
+  };
+
   return (
     <header className="navigation">
       <div className="nav-container">
@@ -22,7 +29,9 @@ function Header() {
         </nav>
 
         <div className="nav-actions">
-          <div className="search-icon"></div>
+          {/* 검색 아이콘 클릭 시 토글 */}
+          <div className="search-icon" onClick={toggleSearch}></div>
+
           <Link to="/login" className="sign-in-link">
             Sign in
           </Link>
@@ -31,6 +40,9 @@ function Header() {
           </Link>
         </div>
       </div>
+
+      {/* SearchBar를 조건부 렌더링 */}
+      {showSearch && <SearchBar />}
     </header>
   );
 }

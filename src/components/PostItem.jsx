@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/PostItem.css'; 
+import '../styles/PostItem.css';
 
 function PostItem({ post }) {
   return (
