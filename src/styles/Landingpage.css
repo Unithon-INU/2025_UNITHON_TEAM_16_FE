@@ -1,0 +1,137 @@
+/* src/styles/LanguageSelector.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido:wght@400&family=Inter:wght@700&display=swap');
+
+/* Landingpage2 */
+.language-selector-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #010000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 1 90 - 배경 이미지 */
+.background-gradient {
+  position: absolute;
+  width: 1024px;
+  height: 1024px;
+  left: calc(50% - 1024px/2);
+  top: calc(50% - 1024px/2 - 5px);
+  background: url('../assets/earth-globe.png') center/cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* HIRE U */
+.main-title {
+  position: absolute;
+  width: 380px;
+  height: 110px;
+  left: calc(50% - 380px/2 + 10px);
+  top: 46px;
+  font-family: 'Zen Kurenaido', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 105px;
+  line-height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20.34%, rgba(33, 75, 190, 0.6) 67.8%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+  z-index: 10;
+}
+
+/* language 컨테이너 */
+.globe-container {
+  position: absolute;
+  width: 873px;
+  height: 621px;
+  left: calc(50% - 873px/2 + 14.5px);
+  top: calc(50% - 621px/2 + 32.5px);
+}
+
+/* 언어 버튼 공통 스타일 */
+.language-button {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  opacity: 0.9;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.language-button:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* bin-korean */
+.language-button[data-lang="ko"] {
+  width: 67px;
+  height: 29px;
+  left: 165px;
+  top: 64px;
+}
+
+/* bin-chinese */
+.language-button[data-lang="zh"] {
+  width: 54px;
+  height: 29px;
+  left: 625px;
+  top: 64px;
+}
+
+/* bin-portuguese */
+.language-button[data-lang="pt"] {
+  width: 125px;
+  height: 29px;
+  left: 29px;
+  top: 258px;
+}
+
+/* bin-vietnamese */
+.language-button[data-lang="vi"] {
+  width: 121px;
+  height: 29px;
+  left: 706px;
+  top: 264px;
+}
+
+/* bin-english */
+.language-button[data-lang="en"] {
+  width: 87px;
+  height: 29px;
+  left: 111px;
+  top: 442px;
+}
+
+/* bin-spanish */
+.language-button[data-lang="es"] {
+  width: 94px;
+  height: 29px;
+  left: 673px;
+  top: 434px;
+}
+
+/* bin-japanese */
+.language-button[data-lang="ja"] {
+  width: 72px;
+  height: 29px;
+  left: 386px;
+  top: 557px;
+}
