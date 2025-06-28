@@ -1,90 +1,41 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import CommentBox from '../components/CommentBox';
-import CommentForm from '../components/CommentForm';
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const currentUser = '유학생123'; // 로그인된 사용자 이름이라고 가정
+const dummyPosts = [
+  {
+    id: 1,
+    title: '첫 번째 글',
+    content: '첫 번째 글의 내용입니다.',
+    author: '홍길동',
+    date: '2025-05-15',
+  },
+  {
+    id: 2,
+    title: '두 번째 글',
+    content: '두 번째 글의 내용입니다.',
+    author: '김학생',
+    date: '2025-05-14',
+  },
+];
 
 function PostDetail() {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const post = dummyPosts.find((p) => p.id === parseInt(id));
 
-  const currentUser = '유학생123'; // 로그인된 사용자 이름 (예시)
-
-  // 샘플 게시글 데이터
-  const samplePosts = [
-    { id: 1, title: '첫 글입니다', content: '안녕하세요!' },
-    { id: 2, title: '두 번째 글', content: '테스트 중입니다.' },
-  ];
-
-  const post = samplePosts.find((p) => p.id === parseInt(id));
-  const [comments, setComments] = useState([
-    {
-      id: 1,
-      author: '유학생A',
-      content: '첫 댓글입니다!',
-      date: '2025-05-15',
-    },
-  ]);
-
-  // 댓글 추가
-  const handleAddComment = (newCommentContent) => {
-    const newComment = {
-      id: Date.now(),
-      author: currentUser,
-      content: newCommentContent,
-      date: new Date().toISOString().split('T')[0],
-    };
-    setComments([newComment, ...comments]);
-  };
-
-  // 댓글 삭제
-  const handleDeleteComment = (commentId) => {
-    const confirm = window.confirm('댓글을 삭제하시겠습니까?');
-    if (confirm) {
-      setComments(comments.filter((c) => c.id !== commentId));
-    }
-  };
-
-  const handleDelete = () => {
-    alert('삭제되었습니다!');
-    navigate('/board');
-  };
-
-  const handleEdit = () => {
-    navigate(`/board/edit/${id}`);
-  };
-
-  if (!post) return <div style={{ padding: 20 }}>해당 글이 없습니다</div>;
+  if (!post) {
+    return <div>게시글을 찾을 수 없습니다.</div>;
+  }
 
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <h2>{post.title}</h2>
-      <p>{post.content}</p>
-
-      <div style={{ marginTop: 20 }}>
-        <button onClick={handleEdit}>✏️ 수정</button>
-        <button onClick={handleDelete} style={{ color: 'red', marginLeft: 10 }}>
-          🗑 삭제
-        </button>
-      </div>
-
-      <hr style={{ margin: '30px 0' }} />
-
-      <h3>💬 댓글</h3>
-
-      {/* 댓글 작성 폼은 한 번만 넣고, onAddComment를 정확히 넘겨줌 */}
-      <CommentForm onAddComment={handleAddComment} />
-
-      {comments.length === 0 && <p>아직 댓글이 없습니다.</p>}
-      {comments.map((comment) => (
-        <CommentBox
-          key={comment.id}
-          comment={comment}
-          onDelete={() => handleDeleteComment(comment.id)}
-          canDelete={comment.author === currentUser}
-        />
-      ))}
+      <p>
+        <strong>작성자:</strong> {post.author}
+      </p>
+      <p>
+        <strong>작성일:</strong> {post.date}
+      </p>
+      <div>{post.content}</div>
     </div>
   );
 }

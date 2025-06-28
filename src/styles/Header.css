@@ -1,42 +1,128 @@
-/* src/components/Header.css */
-.header {
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #ffffff;
+  box-shadow: inset 0px -1px 0px #f3f3f4;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1440px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #0077cc;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Marvel', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  color: #214bbe;
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 31px;
+  height: 32px;
+  background: url('../assets/icon.jpg') no-repeat center center;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #6e6d7a;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #214bbe;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background: url('../assets/search_icon.jpg') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.sign-in-link {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #6e6d7a;
+  text-decoration: none;
+}
+
+.sign-up-btn {
+  padding: 10px 16px;
+  background: rgba(33, 75, 190, 0.7);
+  border-radius: 8px;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sign-up-btn:hover {
+  background: rgba(33, 75, 190, 0.9);
+}
+
+/* 🔑 SearchBar 나타날 때 스타일 */
+.header__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
-  color: white;
-}
-
-.header__logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-
-.header__nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-}
-
-.header__nav a:hover {
-  text-decoration: underline;
+  background: #f9f9f9;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .header__search input {
-  padding: 5px;
-  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  width: 200px;
 }
 
 .header__search button {
-  padding: 5px 10px;
-  margin-left: 5px;
-  background-color: white;
-  color: #0077cc;
+  margin-left: 8px;
+  padding: 6px 12px;
+  background: #214bbe;
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.header__search button:hover {
+  background: #193a8c;
 }
